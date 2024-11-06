@@ -21,11 +21,11 @@ public class carRental {
     private String renterName;
     @Email(message = "Invalid email format.")
     private String renterEmail;
-    @Min(value = 06-11-2024)
+    @FutureOrPresent(message = "The start date has to be in the present or future.")
     private Date rentalStartDate;
-    @Min(value = 07-11-2024)
+    @Future(message = "The end date must be after the start date.")
     private Date rentalEndDate;
-    @Min(value = 0)
+    @Positive(message = "Daily rate has to be greater than 0")
     private DecimalFormat dailyRate;
 
 }
